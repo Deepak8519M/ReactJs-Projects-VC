@@ -161,3 +161,74 @@ Each of those calls must return **one element only**. Multiple root-level elemen
 
 Let me know if you want to style them side-by-side or stack them, I can help with that too.
 
+Q3)
+
+You're using this Tailwind CSS class:
+
+```html
+<div className="w-[100px] h-[100px] bg-white flex items-center gap-2 p-4 justify-center flex-col">
+```
+
+And you're asking why `p-4` (padding) is not working.
+
+---
+
+### ✅ Let's break it down:
+
+* `w-[100px]` → width = 100px
+* `h-[100px]` → height = 100px
+* `p-4` → padding = 1rem = 16px on all sides
+* `bg-white` → white background
+* `flex justify-center items-center flex-col` → vertical flex layout, centered content
+* `gap-2` → 0.5rem gap between children
+
+---
+
+### ⚠️ Problem:
+
+You're setting:
+
+```css
+width: 100px;
+height: 100px;
+padding: 16px;
+```
+
+So the **content + padding must all fit inside 100×100px**. But since `width` and `height` are fixed at 100px, there's **no extra space** to visibly show padding — or the padding might be causing **overflow**.
+
+> **Padding is technically applied, but it's being squashed by your strict height/width.**
+
+---
+
+### ✅ Solutions:
+
+#### ✅ Option 1: Increase size to allow padding to show
+
+```html
+<div className="w-[120px] h-[120px] p-4 ...">
+```
+
+#### ✅ Option 2: Use `box-sizing: border-box`
+
+Tailwind sets `box-sizing: border-box` by default via `preflight`, so padding is **included inside** the width/height.
+
+So if you want padding to be visible **inside** 100px × 100px, your inner content should be smaller.
+
+#### ✅ Option 3: Try adding a border or background to see padding effect
+
+```html
+<div className="w-[100px] h-[100px] bg-white border border-black p-4">
+  Hello
+</div>
+```
+
+This helps you **visualize** that padding is there.
+
+---
+
+### ✅ TL;DR
+
+> Padding **is applied**, but since your box is only 100×100px, it may be visually hard to notice — especially if the inner content is already large or the space is tight. Try increasing the size or inspecting with DevTools.
+
+Let me know what you're trying to achieve visually, and I’ll help you fix it perfectly.
+
