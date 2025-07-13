@@ -5,16 +5,16 @@ import { LuShoppingBag } from "react-icons/lu";
 
 function Nav() {
   return (
-    <div className="w-full h-[70px]    flex justify-between items-center px-[32px] ">
+    <div className="md:px-8 w-full h-[70px]    flex justify-between items-center px-2 ">
       <div className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-md shadow-xl ">
         <MdFastfood className="w-[25px] h-[25px] text-green-500" />
       </div>
 
-      <form className="w-[70%] h-[45px] bg-white flex items-center px-5 gap-5 rounded-md shadow-xl">
+      <form className="w-[50%] md:w-[70%] h-[45px] bg-white flex items-center px-5 gap-5 rounded-md shadow-xl">
         <FaSearch className="text-green-400 w-[13px] h-[13px]" />
         <input
           type="text"
-          className="w-[100%] outline-none text-[15px]"
+          className="text-[14px] w-[100%] outline-none md:text-[16px]"
           placeholder="Search Items .."
         />
       </form>
