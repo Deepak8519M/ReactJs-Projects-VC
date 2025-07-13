@@ -232,3 +232,63 @@ This helps you **visualize** that padding is there.
 
 Let me know what you're trying to achieve visually, and I’ll help you fix it perfectly.
 
+Q4) 
+
+You're asking:
+
+> **How to apply a hover effect on one element when you hover over its parent — using Tailwind CSS?**
+
+This is a common use case, and **Tailwind supports it using "group" and "group-hover" classes**.
+
+---
+
+### ✅ Solution: Use `group` on the parent and `group-hover:` on the child
+
+#### 🔧 Example:
+
+```html
+<div className="group p-4 bg-gray-200 hover:bg-gray-300">
+  <p className="text-black group-hover:text-blue-500">I will change color when parent is hovered</p>
+</div>
+```
+
+---
+
+### 🧠 How it works:
+
+* `group` → Assigns a special group behavior to the **parent element**
+* `group-hover:` → Applies styles to **children when the parent is hovered**
+
+---
+
+### ✅ Real use case: Card hover highlights icon
+
+```html
+<div className="group bg-white p-4 rounded shadow hover:shadow-lg">
+  <h2 className="text-lg font-bold">Card Title</h2>
+  <p className="text-gray-600 group-hover:text-black">Hovering the card changes my text color</p>
+</div>
+```
+
+---
+
+### 🧩 You can also combine other effects:
+
+```html
+<div className="group bg-white p-4 hover:bg-blue-100">
+  <button className="opacity-0 group-hover:opacity-100 transition">Action</button>
+</div>
+```
+
+Here, the button becomes visible **only when the parent is hovered**.
+
+---
+
+### ✅ Summary:
+
+To apply hover effects on a **child when parent is hovered**, use:
+
+* `group` → on parent
+* `group-hover:` → on child
+
+Let me know what exact effect you want to achieve (e.g., show a hidden div, animate, color change), and I’ll give you a ready-to-use example.
