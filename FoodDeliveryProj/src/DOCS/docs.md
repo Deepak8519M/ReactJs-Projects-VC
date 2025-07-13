@@ -292,3 +292,98 @@ To apply hover effects on a **child when parent is hovered**, use:
 * `group-hover:` → on child
 
 Let me know what exact effect you want to achieve (e.g., show a hidden div, animate, color change), and I’ll give you a ready-to-use example.
+
+Q5)
+
+Great! Let's break your question into two parts:
+
+---
+
+## 🧱 **1. Responsiveness in Tailwind CSS**
+
+Tailwind CSS makes **responsive design super easy** using **mobile-first breakpoints**. You write utility classes prefixed with breakpoint names like `sm:`, `md:`, `lg:`, etc.
+
+### 🔑 Mobile-First Approach
+
+You write the **default styles first** (for small screens), then **override them** for larger screens.
+
+---
+
+### ✅ Common Breakpoints in Tailwind
+
+| Prefix | Min Width | Example Device       |
+| ------ | --------- | -------------------- |
+| `sm:`  | `640px`   | Small tablets/phones |
+| `md:`  | `768px`   | Tablets              |
+| `lg:`  | `1024px`  | Laptops              |
+| `xl:`  | `1280px`  | Desktops             |
+| `2xl:` | `1536px`  | Very large screens   |
+
+---
+
+### 📦 Example:
+
+```html
+<div className="text-sm md:text-lg lg:text-2xl">
+  Responsive Text
+</div>
+```
+
+* `text-sm`: default (mobile)
+* `md:text-lg`: on screens ≥ 768px
+* `lg:text-2xl`: on screens ≥ 1024px
+
+---
+
+### 🎯 Another Example: Responsive Grid
+
+```html
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <!-- 3 responsive columns -->
+</div>
+```
+
+---
+
+### 💡 Summary:
+
+> Tailwind makes responsive design easy using utility prefixes like `md:`, `lg:`, etc. You can change padding, margin, layout, font size, colors, and **almost anything** based on screen size.
+
+---
+
+## 🧾 **2. Can you have two `.md` (markdown) files in one Git repo?**
+
+✅ **Yes, absolutely!**
+
+You can have as many `.md` (Markdown) files as you want in a single Git repo. Common examples include:
+
+* `README.md`
+* `CONTRIBUTING.md`
+* `docs/intro.md`
+* `blog/post1.md`
+* `notes.md`
+
+Git has no problem with multiple `.md` files.
+
+---
+
+### 📁 Example folder structure:
+
+```
+my-repo/
+├── README.md
+├── CONTRIBUTING.md
+├── notes.md
+└── docs/
+    ├── intro.md
+    └── advanced.md
+```
+
+---
+
+### ✅ Summary:
+
+> ✔ You **can have multiple `.md` files** in a Git repo — it’s normal.
+> ✔ Tailwind CSS uses **mobile-first breakpoints** like `md:`, `lg:` to make elements responsive easily.
+
+Let me know if you want help with writing a responsive layout or managing `.md` docs inside GitHub projects.
