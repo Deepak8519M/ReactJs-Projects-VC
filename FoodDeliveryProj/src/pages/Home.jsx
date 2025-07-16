@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../components/Nav";
 import Categories from "../Category";
+import Card from "../components/Card";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
           );
         })}
       </div>
+      <Card />
     </div>
   );
 }
