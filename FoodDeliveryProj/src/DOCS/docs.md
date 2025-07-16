@@ -786,7 +786,7 @@ NOT THIS WAY
 onChange={() => setInput(e.target.value)}
 
 ---
-Here's a clean, developer-friendly `README.md` format explaining the **correct use of `onChange` with `setInput()`** in React. It's designed to be clear, helpful, and professional—suitable for sharing in a project, GitHub repo, or internal documentation.
+format explaining the **correct use of `onChange` with `setInput()`** in React. 
 
 ---
 
