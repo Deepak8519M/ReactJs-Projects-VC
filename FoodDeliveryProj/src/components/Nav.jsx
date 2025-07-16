@@ -8,6 +8,19 @@ import { food_items } from "../food";
 function Nav() {
   let { input, setInput, cate, setCate } = useContext(dataContext);
 
+  // useEffect(() => {
+  //   if (input.trim() === "") {
+  //     setCate([]); // Show nothing if input is empty
+  //     return;
+  //   }
+
+  //   const newList = food_items.filter((item) =>
+  //     item.food_name.toLowerCase().includes(input.toLowerCase())
+  //   );
+
+  //   setCate(newList);
+  // }, [input]);
+
   useEffect(() => {
     let newList = food_items.filter((item) =>
       item.food_name.toLowerCase().includes(input.toLowerCase())
