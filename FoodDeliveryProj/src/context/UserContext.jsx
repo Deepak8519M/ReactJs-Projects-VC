@@ -1,8 +1,15 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 export const dataContext = createContext();
 
 function UserContext({ children }) {
-  return <div>{children}</div>;
+  let [input, setInput] = useState("");
+  let data = {input,setInput};
+
+  return (
+    <div>
+      <dataContext.Provider value={data}>{children}</dataContext.Provider>
+    </div>
+  );
 }
 
 export default UserContext;

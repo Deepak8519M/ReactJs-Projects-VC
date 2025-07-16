@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdFastfood } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import { LuShoppingBag } from "react-icons/lu";
+import { dataContext } from "../context/UserContext";
 
 function Nav() {
+  let { input, setInput } = useContext(dataContext);
   return (
     <div className="md:px-8 w-full h-[70px]    flex justify-between items-center px-2 ">
       <div className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-md shadow-xl ">
@@ -16,6 +18,7 @@ function Nav() {
           type="text"
           className="text-[14px] w-[100%] outline-none md:text-[16px]"
           placeholder="Search Items .."
+          onChange={(e) => setInput(e.target.value)}
         />
       </form>
 
