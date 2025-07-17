@@ -7,7 +7,7 @@ import { dataContext } from "../context/UserContext";
 import { RxCross2 } from "react-icons/rx";
 
 function Home() {
-  let { cate, setCate, input } = useContext(dataContext);
+  let { cate, setCate, input, showCart, setShowCart } = useContext(dataContext);
 
   function filter(category) {
     if (category === "All") {
@@ -50,12 +50,19 @@ function Home() {
         ))}
       </div>
 
-      <div className="w-[35vw] h-[100vh] bg-white fixed top-0 right-0 shadow-xl p-5">
+      <div
+        className={`w-[35vw] h-[100vh] bg-white fixed top-0 right-0 shadow-xl p-5 ${
+          showCart ? "translate-x-0" : "translate-x-full"
+        } `}
+      >
         <header className="w-[100%]  flex justify-between items-center ">
-          <span className="text-green-400 text-[18px] font-semibold">
+          <span className="text-green-400 text-[20px] font-semibold">
             Order Items
           </span>
-          <RxCross2 className="text-green-400 text-[18px] font-semibold w-[30px] h-[30px] cursor-pointer" />
+          <RxCross2
+            className="text-green-400 text-[18px] font-semibold w-[30px] h-[30px] cursor-pointer"
+            onClick={() => setShowCart(false)}
+          />
         </header>
       </div>
     </div>

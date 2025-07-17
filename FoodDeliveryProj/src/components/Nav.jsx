@@ -6,7 +6,8 @@ import { dataContext } from "../context/UserContext";
 import { food_items } from "../food";
 
 function Nav() {
-  let { input, setInput, cate, setCate } = useContext(dataContext);
+  let { input, setInput, cate, setCate, showCart, setShowCart } =
+    useContext(dataContext);
 
   // useEffect(() => {
   //   if (input.trim() === "") {
@@ -49,7 +50,12 @@ function Nav() {
         />
       </form>
 
-      <div className="w-[50px] h-[50px] cursor-pointer bg-white flex items-center justify-center relative rounded-md shadow-xl ">
+      <div
+        className="w-[50px] h-[50px] cursor-pointer bg-white flex items-center justify-center relative rounded-md shadow-xl "
+        onClick={() => {
+          setShowCart(true);
+        }}
+      >
         <span className="absolute top-0 right-2 text-green-500 font-semibold text-[15px] ">
           0
         </span>
