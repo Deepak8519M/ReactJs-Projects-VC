@@ -32,7 +32,7 @@ function Nav() {
 
   return (
     <div className="md:px-8 w-full h-[70px]    flex justify-between items-center px-2 ">
-      <div className="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-md shadow-xl ">
+      <div className="w-[50px] h-[50px] bg-white flex items-center justify-center cursor-pointer rounded-md shadow-xl ">
         <MdFastfood className="w-[25px] h-[25px] text-green-500" />
       </div>
 
