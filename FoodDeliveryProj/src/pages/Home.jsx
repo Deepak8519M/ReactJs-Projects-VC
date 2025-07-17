@@ -4,6 +4,7 @@ import Categories from "../Category";
 import Card from "../components/Card";
 import { food_items } from "../food";
 import { dataContext } from "../context/UserContext";
+import { RxCross2 } from "react-icons/rx";
 
 function Home() {
   let { cate, setCate, input } = useContext(dataContext);
@@ -47,6 +48,15 @@ function Home() {
             type={item.food_type}
           />
         ))}
+      </div>
+
+      <div className="w-[35vw] h-[100vh] bg-white fixed top-0 right-0 shadow-xl p-5">
+        <header className="w-[100%]  flex justify-between items-center ">
+          <span className="text-green-400 text-[18px] font-semibold">
+            Order Items
+          </span>
+          <RxCross2 className="text-green-400 text-[18px] font-semibold w-[30px] h-[30px] cursor-pointer" />
+        </header>
       </div>
     </div>
   );

@@ -49,7 +49,7 @@ function Nav() {
         />
       </form>
 
-      <div className="w-[50px] h-[50px] bg-white flex items-center justify-center relative rounded-md shadow-xl ">
+      <div className="w-[50px] h-[50px] cursor-pointer bg-white flex items-center justify-center relative rounded-md shadow-xl ">
         <span className="absolute top-0 right-2 text-green-500 font-semibold text-[15px] ">
           0
         </span>
