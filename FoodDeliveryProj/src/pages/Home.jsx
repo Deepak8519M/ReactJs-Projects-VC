@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import { food_items } from "../food";
 import { dataContext } from "../context/UserContext";
 import { RxCross2 } from "react-icons/rx";
+import Card2 from "../components/Card2";
 
 function Home() {
   let { cate, setCate, input, showCart, setShowCart } = useContext(dataContext);
@@ -64,6 +65,8 @@ function Home() {
             onClick={() => setShowCart(false)}
           />
         </header>
+
+        <Card2 />
       </div>
     </div>
   );
