@@ -52,7 +52,7 @@ function Home() {
       </div>
 
       <div
-        className={`w-[35vw] h-[100vh] bg-white fixed top-0 right-0 shadow-xl p-5 ${
+        className={`  w-full md:w-[35vw] h-[100vh] bg-white fixed top-0 right-0 shadow-xl p-5 ${
           showCart ? "translate-x-0" : "translate-x-full"
         } transition-all duration-500 `}
       >
