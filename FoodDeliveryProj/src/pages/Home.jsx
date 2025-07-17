@@ -53,7 +53,7 @@ function Home() {
       <div
         className={`w-[35vw] h-[100vh] bg-white fixed top-0 right-0 shadow-xl p-5 ${
           showCart ? "translate-x-0" : "translate-x-full"
-        } `}
+        } transition-all duration-500 `}
       >
         <header className="w-[100%]  flex justify-between items-center ">
           <span className="text-green-400 text-[20px] font-semibold">
